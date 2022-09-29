@@ -1,6 +1,6 @@
 ---
 # Service
-apiVersion: v1
+apiVersion: v2
 kind: Service
 metadata:
   name: app
@@ -13,7 +13,7 @@ spec:
 
 ---
 # Deployment
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
   name: app
@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: wil42/playground:v1
+          image: wil42/playground:v2
           ports:
             - containerPort: 8888
           imagePullPolicy: Always
